@@ -1,0 +1,4 @@
+1. npm install in both backend and frontend folders
+2. ng serve in frontend folder (starting angular frontend server)
+3. npm run server in backend folder (starting node.js backend server)
+4. enjoy.

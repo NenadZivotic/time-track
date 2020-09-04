@@ -1,0 +1,63 @@
+<div>
+  <br />
+  <mat-card>
+    <section class="mat-typography">
+      <h3>Create A New Time</h3>
+    </section>
+    <mat-divider></mat-divider>
+    <br />
+    <form [formGroup]="createForm" class="create-form">
+      <mat-form-field class="field-full-width">
+        <input
+          matInput
+          placeholder="Time Title"
+          formControlName="title"
+          #title
+        />
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Author" formControlName="author" #author />
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <textarea
+          matInput
+          placeholder="Description"
+          formControlName="description"
+          #description
+        ></textarea>
+      </mat-form-field>
+      <br />
+      <label for="from" style="margin-right: 10px">Start Date</label>
+      <input type="date" #from formControlName="from" />
+      <br />
+      <br />
+      <label for="to" style="margin-right: 17px">End Date</label>
+      <input type="date" #to formControlName="to" />
+      <br />
+      <br />
+      <button mat-raised-button color="accent" type="button" routerLink="/list">
+        Back
+      </button>
+      <button
+        style="margin-left: 20px"
+        type="button"
+        (click)="
+          addTime(
+            title.value,
+            author.value,
+            description.value,
+            from.value,
+            to.value
+          )
+        "
+        mat-raised-button
+        color="accent"
+        [disabled]="createForm.pristine || createForm.invalid"
+        mat-raised-button
+        color="primary"
+      >
+        Save
+      </button>
+    </form>
+  </mat-card>
+</div>

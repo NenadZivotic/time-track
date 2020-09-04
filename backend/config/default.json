@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://Sone94:pass1234@yummy-pizza.ujqeu.mongodb.net/mean-time-app>?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
+}
